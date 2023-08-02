@@ -1,0 +1,347 @@
+﻿@{
+    // Views/Home/index.cshtml
+    ViewData["Title"] = "Home Page";
+}
+
+@section Head{
+    <link rel="stylesheet" href="./css/Home/banner.css" />
+    <link rel="stylesheet" href="./css/Home/news.css" />
+    <link rel="stylesheet" href="./css/Home/category.css" />
+    <link rel="stylesheet" href="./css/Home/join_us.css" />
+    <link rel="stylesheet" href="./css/Home/index.css" />
+    <link rel="stylesheet" href="~/lib/Swiper/swiper-bundle.css" />
+    <link rel="stylesheet" href="~/css/Home/popularProducts.css" />
+}
+
+@*
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+*@
+
+<!-- banner section -->
+<section class="banner-section">
+    <div class="banner">
+        <div class="container">
+            <div class="banner-txt">
+                <h1>
+                    <span class="romantic-text">FeFe</span>
+                    <small>Welcome</small>
+                </h1>
+                <p>We hope we can make your day a good one!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="popular-products-section mt-2">
+    <div class="row w-100 gx-0">
+        <div class="col-md-10">
+            <h2 class="display-6 mb-0 text-center py-4">熱門產品</h2>
+            <div class="popular-products">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">Slide 5</div>
+                        <div class="swiper-slide">Slide 6</div>
+                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">Slide 8</div>
+                        <div class="swiper-slide">Slide 9</div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <div class="d-flex flex-column h-100">
+                <div class="d-flex fw-bold btn btn-light flex-grow-1 category-box">
+                    <span class="m-auto">
+                        種類1
+                    </span>
+                </div>
+
+                <div class="d-flex fw-bold btn btn-light flex-grow-1 category-box">
+                    <span class="m-auto">
+                        種類1
+                    </span>
+                </div>
+
+                <div class="d-flex fw-bold btn btn-light flex-grow-1 category-box">
+                    <span class="m-auto">
+                        種類1
+                    </span>
+                </div>
+
+                <div class="d-flex fw-bold btn btn-light flex-grow-1 category-box">
+                    <span class="m-auto">
+                        種類1
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- news  -->
+@*<section class="news-section">
+    <!-- bootstrap carousel -->
+    <div class="news-title display-6">最新消息</div>
+    <div id="carouselExampleIndicators"
+         class="carousel slide"
+         data-bs-slide="carousel">
+        <div class="carousel-indicators">
+            <button type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"></button>
+            <button type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+            <button type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./image/index/news/lottery-mug.jpg"
+                             class="d-block w-100"
+                             alt="lottery-mug" />
+                    </div>
+                    <div class="col-9 p-5">
+                        <p class="lh-lg">
+                            咖啡馬克杯是每個咖啡愛好者的必備品。這款優雅且功能性兼具的杯子，將為您的咖啡體驗增色不少。它的設計獨特，搭襯著燙手的咖啡色調，讓您在每一口咖啡中都感受到溫馨與滿足。馬克杯的手柄舒適易握，避免了手指的燙傷。再加上優質陶瓷材質，保溫效果良好，讓您的咖啡保持熱度更長時間。無論是在家中、辦公室或旅途中，這個馬克杯都是您最佳的陪伴。品味您喜愛的咖啡，從選擇這個獨特的咖啡馬克杯開始。
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./image/index/news/lottery2.jpg"
+                             class="d-block w-100"
+                             alt="lottery2" />
+                    </div>
+                    <div class="col-9 p-5 lh-lg">
+                        <p>
+                            現在有一份咖啡折價券等著您！這份折價券可讓您在最喜愛的咖啡店享受獨特的折扣優惠。只需出示這份折價券，您就能在購買美味咖啡時省下不少費用。無論您喜歡濃郁的拿鐵、香醇的卡布奇諾還是清新的冰拿鐵，這份折價券都能讓您品嚐到心心念念的飲品。別錯過這難得的優惠，趕緊將這份折價券保存在手機或錢包中，隨時隨地享受美味咖啡的愉悅時光吧！
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="./image/index/news/big_news.jpg"
+                             class="d-block w-100"
+                             alt="big_news" />
+                    </div>
+                    <div class="col-9 p-5 lh-lg">
+                        <p>
+                            喜訊！我們的咖啡店推出了全新的咖啡豆！這次的咖啡豆是由來自熱帶高地的精選咖啡樹種所採摘，帶來前所未有的風味饗宴。每一顆咖啡豆都經過精心烘焙，散發出令人著迷的芳香。咖啡師將這些豆子研磨成濃郁順滑的咖啡，讓您沉浸在豐富的口感中。無論是單品咖啡或手沖咖啡，都能展現這款新咖啡豆的獨特韻味。趕快來咖啡店品嚐這令人期待的咖啡，讓您的味蕾感受一場香氣與滋味的盛宴！
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>*@
+
+<!-- category -->
+@*<section class="category">
+    <div class="container-fluid px-0 px-lg-2 container-lg py-lg-5">
+        <div class="row g-0">
+            <div class="category-title col-12  order-1">
+                <h2 class="category-title-content display-6 mb-0 ">產品種類</h2>
+            </div>
+            <div class="row col-12 col-md-12 order-2 g-0">
+                <div class="col-12 col-lg-6  mb-lg-0">
+                    <div class="category-content category-content-1">
+                        <a href="./main_product.html" class="text-black">
+                            <img class="w-100 category-img"
+                                 src="./image/index/product/boutique_coffee.webp"
+                                 alt="boutique_coffee" />
+                            <div class="category-img-text ">
+                                <p>精品咖啡</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 ">
+                    <div class="category-content category-content-2 ">
+                        <a href="./main_product.html" class="text-black">
+                            <img class=" w-100 category-img"
+                                 src="./image/index/product/coffee-beans.jpg"
+                                 alt="coffee_bean" />
+                            <div class="category-img-text">
+                                <p>咖啡豆</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-6 ">
+                    <div class="category-content category-content-3">
+                        <a href="./main_product.html" class="text-black">
+                            <img class="w-100 category-img"
+                                 src="./image/index/product/cup.jpg"
+                                 alt="cup" />
+                            <div class="category-img-text">
+                                <p>咖啡周邊</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 ">
+                    <div class="category-content category-content-4">
+                        <a href="./main_product.html" class="text-black">
+                            <img class="w-100 category-img"
+                                 src="./image/index/product/Margaret.jpg"
+                                 alt="margaret" />
+                            <div class="category-img-text">
+                                <p>產地</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="category-content category-content-5">
+                        <a href="./main_product.html" class="text-black">
+                            <img class="w-100 category-img"
+                                 src="./image/index/product/handling_method.webp"
+                                 alt="handling method" />
+                            <div class="category-img-text">
+                                <p>處理手法</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+*@
+<!-- subscription -->
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Free</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">
+                        $0<small class="text-body-secondary fw-light">/mo</small>
+                    </h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>10 users included</li>
+                        <li>2 GB of storage</li>
+                        <li>Email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <button type="button"
+                            class="w-100 btn btn-lg btn-outline-primary">
+                        Sign up for free
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm">
+                <div class="card-header py-3">
+                    <h4 class="my-0 fw-normal">Pro</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">
+                        $15<small class="text-body-secondary fw-light">/mo</small>
+                    </h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>20 users included</li>
+                        <li>10 GB of storage</li>
+                        <li>Priority email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-primary">
+                        Get started
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card mb-4 rounded-3 shadow-sm border-primary">
+                <div class="card-header py-3 text-bg-primary border-primary">
+                    <h4 class="my-0 fw-normal">Enterprise</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">
+                        $29<small class="text-body-secondary fw-light">/mo</small>
+                    </h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>30 users included</li>
+                        <li>15 GB of storage</li>
+                        <li>Phone and email support</li>
+                        <li>Help center access</li>
+                    </ul>
+                    <button type="button" class="w-100 btn btn-lg btn-primary">
+                        Contact us
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<!-- join us -->
+@*<section class="join-us-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2 class="join-us-desc">
+                    歡迎來到 FeFe！我們熱情邀請您訂閱我們的獨家優惠和最新消息。品嘗我們精心調製的咖啡，給您的生活增添一絲香濃的幸福。訂閱即享折扣碼和限定優惠，讓您的每一杯都更美味。我們定期提供新品推出、咖啡知識分享和烘焙過程揭秘。加入我們的訂閱，成為咖啡愛好者的一員，一同追尋咖啡的美妙世界。謝謝您選擇我們，期待為您獻上最佳的咖啡體驗！
+                </h2>
+            </div>
+            <div class="col-md-4">
+                <div class="join-us-interact">
+                    <button type="button" class="btn btn-outline-info join-us-btn">
+                        Join us
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+*@
+@section Scripts{
+    <script src="~/lib/Swiper/swiper-bundle.min.js"></script>
+    <script src="~/js/Home/popularProducts.js"></script>
+
+}

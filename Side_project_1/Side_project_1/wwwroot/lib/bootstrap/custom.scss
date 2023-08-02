@@ -1,0 +1,13 @@
+﻿@import "./scss/_functions.scss";
+@import "./scss/_variables.scss";
+
+$custom-colors: ( 
+    "serene-1": #FBE0C3, 
+    "serene-2": #FFB898, 
+    "serene-3":#7D8E95, 
+    "serene-4": #344658
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+@import "scss/bootstrap.scss";

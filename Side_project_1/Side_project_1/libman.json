@@ -1,0 +1,28 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "bootstrap@5.2.3",
+      "destination": "wwwroot/lib/bootstrap/"
+    },
+    {
+      "library": "jquery@3.7.0",
+      "destination": "wwwroot/lib/jquery/"
+    },
+    {
+      "library": "Swiper@10.0.4",
+      "destination": "wwwroot/lib/Swiper/",
+      "files": [
+        "swiper-bundle.css",
+        "swiper-bundle.js",
+        "swiper-bundle.min.css",
+        "swiper-bundle.min.js",
+        "swiper-bundle.min.js.map",
+        "swiper-bundle.min.mjs",
+        "swiper-bundle.min.mjs.map",
+        "swiper-bundle.mjs"
+      ]
+    }
+  ]
+}

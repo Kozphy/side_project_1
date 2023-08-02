@@ -1,0 +1,140 @@
+﻿@{
+    // Views/Product/index.csthml
+    ViewData["Title"] = "Home Page";
+}
+
+
+@*
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+*@
+
+<!-- product content  -->
+<section class="content pt-5">
+    <div class="container">
+        <div class="row">
+            <!-- left -->
+            <aside class="products-filter col-sm-3">
+                <h2 class="romantic-text text-center">Filter</h2>
+                <div class="mb-3">
+                    <h4 class="text-center">咖啡品項</h4>
+                    <div class="form-check">
+                        <input class="form-check-input"
+                               type="checkbox"
+                               value=""
+                               id="HQcoffee" />
+                        <label class="form-check-label" for="HQcoffee">
+                            精品咖啡
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input"
+                               type="checkbox"
+                               value=""
+                               id="coffeeBean" />
+                        <label class="form-check-label" for="coffeeBean">
+                            咖啡豆
+                        </label>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <h4 class="text-center">處理方式</h4>
+                    <div class="form-check">
+                        <input class="form-check-input"
+                               type="checkbox"
+                               value=""
+                               id="sunShine" />
+                        <label class="form-check-label" for="sunShine"> 日曬 </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input"
+                               type="checkbox"
+                               value=""
+                               id="waterWash" />
+                        <label class="form-check-label" for="waterWash"> 水洗 </label>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-center font-monospace">產地</h4>
+                    <div class="form-check">
+                        <input class="form-check-input"
+                               type="checkbox"
+                               value=""
+                               id="Indonesia" />
+                        <label class="form-check-label" for="Indonesia"> 印尼 </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input"
+                               type="checkbox"
+                               value=""
+                               id="India" />
+                        <label class="form-check-label" for="India"> 印度 </label>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- right -->
+            <section class="products col-sm-9">
+                <div class="row g-3 overflow-hidden">
+                    <div class="search-bar">
+                        <div class="input-group mb-3">
+                            <input type="text"
+                                   class="form-control productsSearchBar"
+                                   placeholder="Search Product"
+                                   aria-label="Search Product"
+                                   aria-describedby="button-addon2" />
+                            <button class="btn btn-outline-secondary productsSearchBtn"
+                                    type="button">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="products-content">
+                        <div class="row">
+                            <div class="row row-cols-1 row-cols-md-3 g-4">
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">This is a short card.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card h-100">
+                                        <img src="..." class="card-img-top" alt="...">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Card title</h5>
+                                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>

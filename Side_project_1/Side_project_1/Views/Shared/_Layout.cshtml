@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Side_project_1</title>
+    @*
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    *@
+    <link rel="stylesheet" href="~/lib/bootstrap/main.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Side_project_1.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Common.css" />
+    <link rel="stylesheet" href="~/css/Layout/navbar.css" />
+    <link rel="stylesheet" href="~/css/Layout/footer.css" />
+    <link rel="stylesheet" href="~/css/Layout/scroll-top.css" />
+    <link rel="stylesheet" href="~/lib/bootstrap/custom.min.css" />
+
+    @await RenderSectionAsync("Head", required: false)
+
+    @*third party*@
+    <link href="https://fonts.cdnfonts.com/css/romantic" rel="stylesheet" />
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+</head>
+<body>
+    @*
+    <header>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <div class="container-fluid">
+    <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">iSpan_middle</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+    aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+    <ul class="navbar-nav flex-grow-1">
+    <li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+    </li>
+    <li class="nav-item">
+    <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </li>
+    </ul>
+    </div>
+    </div>
+    </nav>
+    </header>
+    *@
+
+
+    <header class="sticky">
+        @*<div class="announcement">公告:</div>*@
+        <div class="container-fluid ps-0 pe-0">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary px-3">
+                <div class="brand d-flex">
+                    <a class="navbar-brand romantic-text ms-2" asp-controller="Home" asp-action="Index">
+                        <img class="fefe-icon"
+                             src="/image/icon/cup.png"
+                             alt="fefe-icon" />
+                        FeFe
+                    </a>
+                </div>
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link about-FeFe active"
+                               aria-current="page"
+                               asp-controller="Home"
+                               asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Product Category
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                                <li>
+                                    <a class="dropdown-item" asp-controller="Product"
+                                       asp-action="Index">全部商品</a>
+                                </li>
+                                <li><a class="dropdown-item" href="#">深培</a></li>
+                                <li><a class="dropdown-item" href="#">中培</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link FeFe-traffic"
+                               aria-current="page"
+                               asp-controller="ContactUs" asp-action="Index">ContactUs</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="shop-cart nav-link FeFe-shopping"
+                               asp-controller="ShopCart" asp-action="Index">
+                                <i class="fa-solid fa-cart-shopping"></i>
+                                Cart
+                                <span class="shop-cart-counter">0</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <button type="button" class="btn border-0 personalInfo">
+                                <i class="fas fa-user-alt"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        @*個人資訊側欄*@
+        <section class="personalInfoSection">
+            <div class="personalInfoContent">
+                <div class="personalAction p-3">
+                    <div class="personalInfoUser fw-bold fs-4 mb-3 mt-5 text-center"></div>
+                    <div class="personalInfoLogin fw-bold fs-4 mb-3 mt-5 text-center">
+                        <a  asp-controller="RegisterLogin" asp-action="Login"  class="font-monospace"> Login </a>
+                    </div>
+                    <div class="personalInfoSignUp fw-bold fs-4 mb-3 text-center">
+                        <button type="button" asp-controller="RegisterLogin" asp-action="SignUp" class="font-monospace"> SignUp </button>
+                    </div>
+                    <div class="personalInfoLogout fw-bold fs-4 mb-3 text-center">
+                        <span class="font-monospace"> Logout </span>
+                    </div>
+                    <div class="personalInfoClose fw-bold fs-4 mb-3 text-center">
+                        <span class="font-monospace"> Close </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </header>
+
+
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+    @*
+    <footer class="border-top footer text-muted">
+    <div class="container">
+    &copy; 2023 - iSpan_middle - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
+    </footer>
+    *@
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-12 mb-3 mb-lg-0">
+                    <div class="footer-title">
+                        <h3 class="text-center romantic-text hr-sect">FeFe</h3>
+                    </div>
+                    <img class="w-100 footer-img img-fluid"
+                         src="./image/index/footer/certifications.webp"
+                         alt="silver" />
+                </div>
+                <div class="col-lg-3 col-12 mb-3 mb-lg-0 footer-spirit">
+                    <div class="footer-title">
+                        <h3 class="text-center hr-sect">核心精神</h3>
+                    </div>
+                    <div class="footer-content">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+                            natus nesciunt sit, impedit veritatis voluptas placeat aliquam
+                            fuga repellat sed eos, suscipit facere mollitia. Cum, dolorem!
+                            Fuga iste enim sunt!
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-12 mb-3 mb-lg-0 footer-contact justify-content-center">
+                    <div class="footer-title">
+                        <h3 class="text-center hr-sect">聯繫我們</h3>
+                    </div>
+                    <div class="footer-content">
+                        <p>電話: 09-68854232</p>
+                        <p>傳真: 04-25693154</p>
+                        <p>信箱: fiejwh@gmail.com</p>
+                        <p>Line: @@ioki</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-12 mb-3 mb-lg-0 footer-operation-info">
+                    <div class="footer-title">
+                        <h3 class="text-center hr-sect">營業資訊</h3>
+                    </div>
+                    <div class="footer-content">
+                        <p>周一 ~ 周五: 10:00 ~ 17:30</p>
+                        <p>周六: 8:30 ~ 12:00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<section class="layout-icon-section">
+
+    <!-- arrow up -->
+    <div class="arrow-up-section text-center">
+        <a class="arrow-fa" href="#">
+            <i class="fa-solid fa-arrow-up"></i>
+        </a>
+    </div>
+    
+    <!-- chat icon -->
+    <div class="chat-icon-section">
+        <a>
+            <i class="bi bi-chat-dots"></i>
+        </a>
+    </div>
+
+</section>
+
+<!-- third party -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- current website-->
+    <script src="~/js/Layout/sideBar.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@*
+    Views/ContactUs/index.cshtml
+*@
+
+<div class="container">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d29124.832079525448!2d120.651025!3d24.150541!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34693d9650422ae1%3A0x334dfd5796c49ff6!2z6LOH5bGV5ZyL6ZqbLeWOnyDos4fnrZbmnIMt5pW45L2N5pWZ6IKy56CU56m25omALeS4reWNgA!5e0!3m2!1sen!2stw!4v1682783236837!5m2!1sen!2stw"
+            class="w-100"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <form action="">
+        <div class="row px-2">
+            <div class="col-lg-6">
+                <div class="mb-3">
+                    <label for="Name" class="form-label">姓名 <span class="text-danger">*</span></label>
+                    <input type="text"
+                           class="form-control"
+                           id="Name"
+                           placeholder="enter your Name"
+                           required />
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label" for="gender">性別 </label>
+                    <select id="gender"
+                            class="form-select"
+                            aria-label="Default select example">
+                        <option value="1">男</option>
+                        <option value="2">女</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="phone" class="form-label">
+                        電話
+                        <span class="text-danger">*</span>
+                    </label>
+                    <input type="text"
+                           class="form-control"
+                           id="phone"
+                           placeholder="enter your phone"
+                           required />
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">
+                        信箱
+                        <span class="text-danger">*</span>
+                    </label>
+                    <input type="email"
+                           class="form-control"
+                           id="email"
+                           placeholder="name@example.com"
+                           required />
+                </div>
+                <div>
+                    <label for="address" class="form-label">
+                        地址
+                        <span class="text-danger">*</span>
+                    </label>
+                    <input type="text"
+                           class="form-control"
+                           id="address"
+                           placeholder="enter your address"
+                           required />
+                </div>
+            </div>
+
+            <div class="col-lg-6 overflow-scroll">
+                <div class="mb-3">
+                    <label for="filesSelect" class="form-label">檔案選擇</label>
+                    <input class="form-control"
+                           type="file"
+                           id="filesSelect"
+                           multiple />
+                </div>
+                <div style="height: 100%">
+                    <label for="exampleFormControlTextarea1" class="form-label">
+                        問題描述
+                        <span class="text-danger">*</span>
+                    </label>
+                    <textarea class="form-control"
+                              style="height: 100%; max-height: 100%; overflow-y: hidden"
+                              id="exampleFormControlTextarea1"
+                              required></textarea>
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary mt-3 w-100">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,44 @@
+﻿//const swiper = new Swiper('.swiper', {
+//  // Optional parameters
+//  direction: 'vertical',
+//  loop: true,
+
+//  // If we need pagination
+//  pagination: {
+//    el: '.swiper-pagination',
+//  },
+
+//  // Navigation arrows
+//  navigation: {
+//    nextEl: '.swiper-button-next',
+//    prevEl: '.swiper-button-prev',
+//  },
+
+//  // And if we need scrollbar
+//  scrollbar: {
+//    el: '.swiper-scrollbar',
+//  },
+//});
+
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 0,
+    grid: {
+        rows:1,
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    breakpoints: {
+        996: {
+            grid: {
+                rows: 2,
+            },
+
+            slidesPerView: 3,
+            spaceBetween: 30,
+
+        }
+    }
+});
