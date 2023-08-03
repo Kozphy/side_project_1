@@ -11,14 +11,11 @@
     <link rel="stylesheet" href="./css/Home/index.css" />
     <link rel="stylesheet" href="~/lib/Swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="~/css/Home/popularProducts.css" />
+
+    <!-- third party -->
+    
 }
 
-@*
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
-*@
 
 <!-- banner section -->
 <section class="banner-section">
@@ -35,8 +32,8 @@
     </div>
 </section>
 
-
-<section class="popular-products-section mt-2">
+<!-- 熱門產品 -->
+<section class="popular-products-section mt-2 py-3">
     <div class="row w-100 gx-0">
         <div class="col-md-10">
             <h2 class="display-6 mb-0 text-center py-4">熱門產品</h2>
@@ -318,6 +315,10 @@
 
 
 </div>
+<!-- calander -->
+<div class="container">
+    <div id="calendar"></div>
+</div>
 
 
 <!-- join us -->
@@ -343,5 +344,6 @@
 @section Scripts{
     <script src="~/lib/Swiper/swiper-bundle.min.js"></script>
     <script src="~/js/Home/popularProducts.js"></script>
-
+    <script src="~/lib/fullcalendar/index.global.min.js"></script>
+    <script src="~/js/Home/CalanderThirdParty.js"></script>
 }

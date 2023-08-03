@@ -23,6 +23,10 @@
         "swiper-bundle.min.mjs.map",
         "swiper-bundle.mjs"
       ]
+    },
+    {
+      "library": "fullcalendar@6.1.8",
+      "destination": "wwwroot/lib/fullcalendar/"
     }
   ]
 }
