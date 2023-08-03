@@ -84,19 +84,13 @@
                                asp-controller="Home"
                                asp-action="Index">Home</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Product Category
-                                <span class="caret"></span>
+                        <li class="nav-item ">
+                            <a class="nav-link"
+                               asp-controller="Products"
+                               asp-action="Products"
+                               aria-expanded="false">
+                                Products
                             </a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                <li>
-                                    <a class="dropdown-item" asp-controller="Product"
-                                       asp-action="Index">全部商品</a>
-                                </li>
-                                <li><a class="dropdown-item" href="#">深培</a></li>
-                                <li><a class="dropdown-item" href="#">中培</a></li>
-                            </ul>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link FeFe-traffic"
@@ -126,7 +120,7 @@
                 <div class="personalAction p-3">
                     <div class="personalInfoUser fw-bold fs-4 mb-3 mt-5 text-center"></div>
                     <div class="personalInfoLogin fw-bold fs-4 mb-3 mt-5 text-center">
-                        <a  asp-controller="RegisterLogin" asp-action="Login"  class="font-monospace"> Login </a>
+                        <a asp-controller="RegisterLogin" asp-action="Login" class="font-monospace"> Login </a>
                     </div>
                     <div class="personalInfoSignUp fw-bold fs-4 mb-3 text-center">
                         <button type="button" asp-controller="RegisterLogin" asp-action="SignUp" class="font-monospace"> SignUp </button>
@@ -205,25 +199,25 @@
         </div>
     </footer>
 
-<section class="layout-icon-section">
+    <section class="layout-icon-section">
 
-    <!-- arrow up -->
-    <div class="arrow-up-section text-center">
-        <a class="arrow-fa" href="#">
-            <i class="fa-solid fa-arrow-up"></i>
-        </a>
-    </div>
-    
-    <!-- chat icon -->
-    <div class="chat-icon-section">
-        <a>
-            <i class="bi bi-chat-dots"></i>
-        </a>
-    </div>
+        <!-- arrow up -->
+        <div class="arrow-up-section text-center">
+            <a class="arrow-fa" href="#">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </div>
 
-</section>
+        <!-- chat icon -->
+        <div class="chat-icon-section">
+            <a>
+                <i class="bi bi-chat-dots"></i>
+            </a>
+        </div>
 
-<!-- third party -->
+    </section>
+
+    <!-- third party -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
