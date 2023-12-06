@@ -1,6 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Side_project_1.Models;
+using Side_project_1.Models.ViewModels;
+using System.Collections.Generic;
 
 namespace Side_project_1.Controllers
 {
@@ -15,6 +17,19 @@ namespace Side_project_1.Controllers
 
         public IActionResult Index()
         {
+            // create thumbnailImg and return to index.cshtml
+            //List<HomeIndexVm> homeIndexVms = new List<HomeIndexVm> 
+            //{
+            //    new List<ThumbnailImg> thumbnail
+            //};
+
+            //List<ThunbnailImg> thunbnailImgs =
+            //   new List<ThunbnailImg>() {
+            //        new ThunbnailImg(){ },
+            //        new ThunbnailImg(){ },
+            //        new ThunbnailImg(){ },
+            //        new ThunbnailImg(){ },
+            //   };
             return View();
         }
 

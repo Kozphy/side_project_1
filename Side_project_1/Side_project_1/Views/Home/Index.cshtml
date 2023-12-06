@@ -1,9 +1,12 @@
-﻿@{
+﻿@using System.Collections.Generic;
+@model Side_project_1.Models.ViewModels.HomeIndexVm;
+
+@{
     // Views/Home/index.cshtml
     ViewData["Title"] = "Home Page";
 }
 
-@section Head{
+@section Head {
     <link rel="stylesheet" href="./css/Home/banner.css" />
     <link rel="stylesheet" href="./css/Home/news.css" />
     <link rel="stylesheet" href="./css/Home/category.css" />
@@ -11,6 +14,7 @@
     <link rel="stylesheet" href="./css/Home/index.css" />
     <link rel="stylesheet" href="~/lib/Swiper/swiper-bundle.css" />
     <link rel="stylesheet" href="~/css/Home/popularProducts.css" />
+    <link rel="stylesheet" href="~/css/Home/Services.css" />
     <!-- third party -->
 }
 
@@ -30,6 +34,65 @@
     </div>
 </section>
 
+<!-- ======= Services Section ======= -->
+<section class="services my-2">
+    <div class="container">
+        <div class="row">
+            @{
+                @Model.thunbnailImg
+        List<@Model.thunbnailImg> thunbnailImgList = new List<@Model.thunbnailImg>{
+            @Model.thunbnailImg{
+            Location=@"C:\Users\dbdf0\source\repos\interview_project\Side_project_1\Side_project_1\wwwroot\image\index\Home\Services\coffee1.png",
+            },
+            @Model.thunbnailImag{
+            Location=@"C:\Users\dbdf0\source\repos\interview_project\Side_project_1\Side_project_1\wwwroot\image\index\Home\Services\coffee2.png",
+            },
+            @Model.thunbnailImag{
+            Location=@"C:\Users\dbdf0\source\repos\interview_project\Side_project_1\Side_project_1\wwwroot\image\index\Home\Services\coffee3.png",
+            },
+            @Model.thunbnailImag{
+            Location=@"C:\Users\dbdf0\source\repos\interview_project\Side_project_1\Side_project_1\wwwroot\image\index\Home\Services\coffee4.png",
+            }
+            };
+
+                for (int i = 0; i<ThunbnailImagList.Count; i++)
+                {
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up">
+                    <div class="icon-box icon-box-pink">
+                        <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                        <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+                        <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon-box icon-box-cyan">
+                        <div class="icon"><i class="bx bx-file"></i></div>
+                        <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+                        <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box icon-box-green">
+                        <div class="icon"><i class="bx bx-tachometer"></i></div>
+                        <h4 class="title"><a href="">Magni Dolores</a></h4>
+                        <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+                    <div class="icon-box icon-box-blue">
+                        <div class="icon"><i class="bx bx-world"></i></div>
+                        <h4 class="title"><a href="">Nemo Enim</a></h4>
+                        <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+                    </div>
+                </div>
+                }
+            }
+        </div>
+    </div>
+</section><!-- End Services Section -->
 <!-- 熱門產品 -->
 <section class="popular-products-section mt-2 py-3">
     <div class="row w-100 gx-0">
@@ -38,13 +101,27 @@
             <div class="popular-products">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        <div class="swiper-slide">Slide 4</div>
-                        <div class="swiper-slide">Slide 5</div>
-                        <div class="swiper-slide">Slide 6</div>
-                        <div class="swiper-slide">Slide 7</div>
+                        <div class="swiper-slide">
+                            Slide 1
+                        </div>
+                        <div class="swiper-slide">
+                            Slide 2
+                        </div>
+                        <div class="swiper-slide">
+                            Slide 3
+                        </div>
+                        <div class="swiper-slide">
+                            Slide 4
+                        </div>
+                        <div class="swiper-slide">
+                            Slide 5
+                        </div>
+                        <div class="swiper-slide">
+                            Slide 6
+                        </div>
+                        <div class="swiper-slide">
+                            Slide 7
+                        </div>
                         <div class="swiper-slide">Slide 8</div>
                         <div class="swiper-slide">Slide 9</div>
                     </div>
@@ -339,7 +416,7 @@
     </div>
 </section>
 *@
-@section Scripts{
+@section Scripts {
     <script src="~/lib/Swiper/swiper-bundle.min.js"></script>
     <script src="~/js/Home/popularProducts.js"></script>
     <script src="~/lib/fullcalendar/index.global.min.js"></script>

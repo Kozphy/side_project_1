@@ -7,14 +7,21 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Side_project_1.Controllers
 {
+    [Route("Products")]
     public class ProductsController : Controller
     {
-        public IActionResult Products() { 
+        [HttpGet]
+        public IActionResult Products() {
+
             return View();
         }
 
-        public IActionResult Product()
+        [HttpGet("{Product}/{id}")]
+        //[Route("{id:int}")]
+        public IActionResult Product(int id)
         {
+            List<string> s = new List<string>{ "s", "bl", "c" };
+            Console.WriteLine(id);
             return View();
         }
 

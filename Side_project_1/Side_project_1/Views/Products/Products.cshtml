@@ -23,7 +23,7 @@
                     <div class="form-check">
                         <input class="form-check-input"
                                type="checkbox"
-                               value=""
+                               value="Boutique_coffee"
                                id="HQcoffee" />
                         <label class="form-check-label" for="HQcoffee">
                             精品咖啡
@@ -75,7 +75,7 @@
                 </div>
             </aside>
 
-            <!-- right -->
+            <!-- product list -->
             <section class="products col-sm-9">
                 <div class="row g-3 overflow-hidden">
                     <div class="search-bar">
@@ -94,15 +94,18 @@
                     <div class="products-content">
                         <div class="row">
                             <div class="row row-cols-1 row-cols-md-3 g-4">
-                                <div class="col">
-                                    <div class="card h-100">
-                                        <img src="..." class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Cardamon_Cream</h5>
-                                            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                <form asp-route="Products/Product" asp-route-id="1">
+                                    <div class="col">
+                                        <div class="card h-100">
+                                            <img src="..." class="card-img-top" alt="Cardamon_Cream">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Cardamon_Cream</h5>
+                                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                            </div>
+                                            <button type="button" class="btn btn-primary">Buy</button>
                                         </div>
                                     </div>
-                                </div>
+                                </form>
                                 <div class="col">
                                     <div class="card h-100">
                                         <img src="..." class="card-img-top" alt="...">
