@@ -9,8 +9,10 @@ namespace Side_project_1.Models.ViewModels
     }
     public class ThumbnailImg
     {
+        public string Title { get; set; }
         public string Location { get; set; }
         public string Content { get; set; }
+        public string Description { get; set; }
     }
 
 }

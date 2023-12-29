@@ -16,7 +16,13 @@
 
   <ItemGroup>
     <PackageReference Include="jieba.NET" Version="0.42.2" />
+    <PackageReference Include="Microsoft.AspNetCore.Components" Version="6.0.25" />
     <PackageReference Include="NLog.Extensions.Logging" Version="5.3.7" />
+    <PackageReference Include="Toolbelt.AspNetCore.CssLiveReloader" Version="1.1.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\image\thumbnailImg\" />
   </ItemGroup>
 
 </Project>

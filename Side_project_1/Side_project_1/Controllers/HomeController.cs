@@ -4,6 +4,7 @@ using Side_project_1.Models;
 using Side_project_1.Models.ViewModels;
 using System.Collections.Generic;
 using System.Net.Http;
+using System.Reflection;
 
 namespace Side_project_1.Controllers
 {
@@ -23,19 +24,31 @@ namespace Side_project_1.Controllers
             List<ThumbnailImg> thumbnailsImgs = new List<ThumbnailImg>()
             {
                 new ThumbnailImg(){ 
-                    Location=@"C:\Users\dbdf0\source\repos\interview_project\Side_project_1\Side_project_1\wwwroot\image\index\Home\Services\coffee1.png",
+                    Title="coffee1",
+                    Location=@"/image/index/Home/Services/coffee1.png",
+                    Content=@"/image/ThumbnailImg1.jpg",
+                    Description=@"Describes the acidity (liveliness and sharpness) of brewed coffee."
                 },
                 new ThumbnailImg()
                 {
-                    Location = @"C:\Users\dbdf0\source\repos\interview_project\Side_project_1\Side_project_1\wwwroot\image\index\Home\Services\coffee2.png",
+                    Title="coffee2",
+                    Location = @"/image/index/Home/Services/coffee2.jpg",
+                    Content=@"/image/ThumbnailImg2.jpg",
+                    Description=@"Describes the acidity (liveliness and sharpness) of brewed coffee."
                 },
                 new ThumbnailImg()
                 {
-                    Location = @"C:\Users\dbdf0\source\repos\interview_project\Side_project_1\Side_project_1\wwwroot\image\index\Home\Services\coffee3.png",
+                    Title="coffee3",
+                    Location = @"/image/index/Home/Services/coffee3.jpg",
+                    Content=@"/image/ThumbnailImg3.jpg",
+                    Description=@"Describes the remaining flavor in the mouth, once the coffee is swallowed."
                 },
                 new ThumbnailImg()
                 {
-                    Location = @"C:\Users\dbdf0\source\repos\interview_project\Side_project_1\Side_project_1\wwwroot\image\index\Home\Services\coffee4.png",
+                    Title="coffee4",
+                    Location = @"/image/index/Home/Services/coffee4.jpg",
+                    Content=@"/image/ThumbnailImg4.jpg",
+                    Description=@" Describes the smell of brewed coffee. See more below – we include 63 words used to describe coffee aroma."
                 }
             };
 
